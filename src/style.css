@@ -1,0 +1,91 @@
+:root {
+  /* variables */
+
+  --bg-img: url("https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg");
+  --clr-frame: rgb(255, 241, 230);
+  --clr-secondary-frame: rgb(232, 227, 223);
+  --clr-text: rgb(0, 0, 0);
+
+  /* root styles */
+
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  --bg-img: url("https://ewe3rn3et5.ufs.sh/f/O2pVoxcml58RXO0OTRaO6sunRqcPBkQNYd1AbVp9fWhCerFi");
+  --clr-frame: rgb(2, 11, 47);
+  --clr-secondary-frame: rgb(31, 31, 64);
+  --clr-text: rgb(255, 255, 255);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  overflow: hidden;
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  padding: 2rem 2rem 2rem 0;
+  margin: 0 auto;
+
+  justify-content: center;
+
+  text-align: center;
+}
