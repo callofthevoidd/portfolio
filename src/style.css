@@ -2,9 +2,13 @@
   /* variables */
 
   --bg-img: url("https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg");
-  --clr-frame: rgb(255, 241, 230);
+  --clr-frame: rgb(255, 254, 252);
   --clr-secondary-frame: rgb(232, 227, 223);
   --clr-text: rgb(0, 0, 0);
+  --clr-secondary-text: #2d2d2d;
+  --clr-hr: #d9d9d9;
+
+  --secret-filter: invert(0%);
 
   /* root styles */
 
@@ -19,13 +23,37 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-width: none; /* hides scrollbar */
+  -ms-overflow-style: none; /* for IE/Edge */
+  overflow: auto; /* still scrollable */
+
+  filter: var(--secret-filter);
 }
 
 [data-theme="dark"] {
-  --bg-img: url("https://ewe3rn3et5.ufs.sh/f/O2pVoxcml58RXO0OTRaO6sunRqcPBkQNYd1AbVp9fWhCerFi");
+  --bg-img: url("https://files.catbox.moe/xkjpax.png");
   --clr-frame: rgb(2, 11, 47);
   --clr-secondary-frame: rgb(31, 31, 64);
   --clr-text: rgb(255, 255, 255);
+  --clr-secondary-text: #d7e3ee;
+  --clr-hr: #010c24;
+}
+
+[data-secret1="true"] {
+  --secret-filter: invert(100%);
+}
+
+* {
+  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+hr {
+  border: none;
+  height: 4px;
+  background-color: Var(--clr-hr);
+  margin: 20px 0;
 }
 
 a {
@@ -38,8 +66,6 @@ a:hover {
 }
 
 body {
-  overflow: hidden;
-
   padding: 0;
   margin: 0;
   display: flex;
@@ -51,6 +77,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {

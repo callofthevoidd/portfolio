@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Profile from "./components/Profile.vue";
+import Stuff from "./components/Stuff.vue";
 import TopBar from "./components/TopBar.vue";
 </script>
 
@@ -7,6 +8,7 @@ import TopBar from "./components/TopBar.vue";
   <TopBar />
   <div class="main">
     <Profile user-id="1221457893522669662" />
+    <Stuff />
   </div>
 </template>
 
@@ -18,6 +20,16 @@ import TopBar from "./components/TopBar.vue";
   align-self: flex-start;
 
   padding-top: 2rem;
+  margin-bottom: 2rem;
+
+  gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+  /* tablet styles here */
+  .main {
+    flex-direction: column;
+  }
 }
 
 .content {

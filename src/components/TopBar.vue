@@ -35,11 +35,7 @@ export default {
   },
   methods: {
     switchTheme() {
-      if (this.theme == `light`) {
-        this.theme = `dark`;
-      } else {
-        this.theme = `light`;
-      }
+      this.theme = this.theme === "light" ? "dark" : "light";
     },
     getDate() {
       const today = new Date();
@@ -131,7 +127,8 @@ export default {
 }
 
 .theme-selector {
-  width: 2.7%;
+  height: 5vh;
+
   aspect-ratio: 1 / 1;
   background-color: var(--clr-secondary-frame);
   color: var(--clr-text);
@@ -139,10 +136,10 @@ export default {
   transition: transform 0.3s ease;
 
   outline: 0;
-  position: relative;
+  position: absolute;
   padding: 0.1rem;
 
-  left: 33%;
+  transform: translateX(42vw);
 }
 
 .theme-img {
