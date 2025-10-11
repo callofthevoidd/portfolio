@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { nextTick } from "vue";
 import vr from "./Utility/vr.vue";
 </script>
 
@@ -32,6 +31,8 @@ import vr from "./Utility/vr.vue";
         them.
       </p>
     </div>
+
+    <hr />
   </div>
 </template>
 

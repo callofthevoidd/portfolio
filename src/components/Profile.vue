@@ -42,7 +42,7 @@ defineProps({ userId: String })
 
     <br>
     While I mostly work within the Roblox ecosystem, I'm currently expanding into <strong>C/C++</strong> to create desktop applications and games on other engines.
-   </p>
+   </p> 
   </div>
 </template>
 
